@@ -1,8 +1,7 @@
 import {useTheme} from '@react-navigation/native';
-
 import React from 'react';
-import {Text} from 'react-native';
-import getStyleSheet from '../utils/getStylesheet';
+import {StyleSheet, Text} from 'react-native';
+
 import BulletPoint from './BulletPoint';
 import Checkmark from './Checkmark';
 import Row from './Row';
@@ -19,5 +18,13 @@ const RowWithCheckmark = ({textToDisplay, isChecked}) => {
     </Row>
   );
 };
+
+const getStyleSheet = colors =>
+  StyleSheet.create({
+    standardText: {
+      fontSize: 16,
+      color: colors.text,
+    },
+  });
 
 export default RowWithCheckmark;

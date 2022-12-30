@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
-import {Switch, StyleSheet} from 'react-native';
 import {useTheme} from '@react-navigation/native';
+import React, {useState} from 'react';
+import {StyleSheet, Switch} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
+
 import {
   selectChosenOverrideThemeID,
   setChosenOverrideThemeID,

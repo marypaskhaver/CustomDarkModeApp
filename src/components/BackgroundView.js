@@ -1,6 +1,7 @@
 import {useTheme} from '@react-navigation/native';
 import React from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
+
 import AdaptiveStatusBar from './AdaptiveStatusBar';
 
 const BackgroundView = ({children}) => {

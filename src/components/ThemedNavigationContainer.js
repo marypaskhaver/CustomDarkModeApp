@@ -1,7 +1,8 @@
-import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {useSelector} from 'react-redux';
+import React from 'react';
 import {useColorScheme} from 'react-native';
+import {useSelector} from 'react-redux';
+
 import APP_THEMES from '../constants/appThemes';
 import {
   selectChosenOverrideThemeID,

@@ -1,13 +1,17 @@
-import {useTheme} from '@react-navigation/native';
 import React from 'react';
-import {View} from 'react-native';
-import getStyleSheet from '../utils/getStylesheet';
+import {StyleSheet, View} from 'react-native';
 
 const Line = () => {
-  const {colors} = useTheme();
-  const styles = getStyleSheet(colors);
-
   return <View style={styles.line} />;
 };
+
+const styles = StyleSheet.create({
+  line: {
+    borderBottomColor: 'gray',
+    borderBottomWidth: 1,
+    height: 1,
+    width: '100%',
+  },
+});
 
 export default Line;

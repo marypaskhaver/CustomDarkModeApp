@@ -1,13 +1,16 @@
-import {useTheme} from '@react-navigation/native';
 import React from 'react';
-import {View} from 'react-native';
-import getStyleSheet from '../utils/getStylesheet';
+import {StyleSheet, View} from 'react-native';
 
 const Row = ({children}) => {
-  const {colors} = useTheme();
-  const styles = getStyleSheet(colors);
-
   return <View style={styles.row}>{children}</View>;
 };
+
+const styles = StyleSheet.create({
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    height: 44,
+  },
+});
 
 export default Row;
