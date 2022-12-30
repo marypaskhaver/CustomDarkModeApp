@@ -1,7 +1,6 @@
 import {createSlice} from '@reduxjs/toolkit';
 
-import APP_THEMES from '../../constants/appThemes';
-import DARK_MODE_OVERRIDE_OPTIONS from '../../constants/darkModeOverrideOptions';
+import {APP_THEMES, DARK_MODE_OVERRIDE_OPTIONS} from '../../constants';
 
 const themesSlice = createSlice({
   name: 'themes',
@@ -27,4 +26,5 @@ export const selectChosenOverrideThemeID = state =>
   state.themes.chosenOverrideThemeID;
 export const selectCurrentAppTheme = state => state.themes.currentAppTheme;
 export const {setChosenOverrideThemeID} = themesSlice.actions;
+
 export default themesSlice.reducer;

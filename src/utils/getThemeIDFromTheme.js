@@ -1,4 +1,4 @@
-import DARK_MODE_OVERRIDE_OPTIONS from '../constants/darkModeOverrideOptions';
+import {DARK_MODE_OVERRIDE_OPTIONS} from '../constants';
 
 const getThemeIDFromTheme = theme => {
   const themeDescriptions = Object.values(DARK_MODE_OVERRIDE_OPTIONS);

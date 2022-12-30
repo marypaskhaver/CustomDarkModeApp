@@ -3,11 +3,11 @@ import React from 'react';
 import {useColorScheme} from 'react-native';
 import {useSelector} from 'react-redux';
 
-import APP_THEMES from '../constants/appThemes';
+import {APP_THEMES} from '../constants';
 import {
   selectChosenOverrideThemeID,
   selectCurrentAppTheme,
-} from '../redux/reducers/themesReducer';
+} from '../redux/reducers';
 
 const getThemeFromScheme = scheme => {
   const schemeIsDark = scheme === 'dark';

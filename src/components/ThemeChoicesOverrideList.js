@@ -4,14 +4,13 @@ import {useState} from 'react';
 import {FlatList, TouchableOpacity} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 
-import DARK_MODE_OVERRIDE_OPTIONS from '../constants/darkModeOverrideOptions';
+import {DARK_MODE_OVERRIDE_OPTIONS} from '../constants';
 import {
   selectChosenOverrideThemeID,
   setChosenOverrideThemeID,
-} from '../redux/reducers/themesReducer';
+} from '../redux/reducers';
 import getThemeIDFromTheme from '../utils/getThemeIDFromTheme';
-import Line from './Line';
-import RowWithCheckmark from './RowWithCheckmark';
+import {Line, RowWithCheckmark} from './';
 
 const ThemeOverrideChoicesList = () => {
   const dispatch = useDispatch();

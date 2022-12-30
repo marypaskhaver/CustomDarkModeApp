@@ -3,11 +3,13 @@ import {StyleSheet, Text} from 'react-native';
 import {useSelector} from 'react-redux';
 
 import {selectChosenOverrideThemeID} from '../redux/reducers/themesReducer';
-import AutomaticDarkModeSwitch from './AutomaticDarkModeSwitch';
-import BackgroundView from './BackgroundView';
-import Card from './Card';
-import Row from './Row';
-import ThemeOverrideChoicesList from './ThemeChoicesOverrideList';
+import {
+  AutomaticDarkModeSwitch,
+  BackgroundView,
+  Card,
+  Row,
+  ThemeOverrideChoicesList,
+} from './';
 
 const AppScreens = () => {
   const chosenOverrideThemeID = useSelector(selectChosenOverrideThemeID);

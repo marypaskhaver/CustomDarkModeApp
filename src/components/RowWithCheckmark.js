@@ -2,9 +2,7 @@ import {useTheme} from '@react-navigation/native';
 import React from 'react';
 import {StyleSheet, Text} from 'react-native';
 
-import BulletPoint from './BulletPoint';
-import Checkmark from './Checkmark';
-import Row from './Row';
+import {BulletPoint, Checkmark, Row} from './';
 
 const RowWithCheckmark = ({textToDisplay, isChecked}) => {
   const {colors} = useTheme();

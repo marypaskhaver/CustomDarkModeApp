@@ -6,7 +6,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import {
   selectChosenOverrideThemeID,
   setChosenOverrideThemeID,
-} from '../redux/reducers/themesReducer';
+} from '../redux/reducers';
 import getThemeIDFromTheme from '../utils/getThemeIDFromTheme';
 
 const AutomaticDarkModeSwitch = () => {
