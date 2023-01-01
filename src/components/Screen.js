@@ -8,7 +8,7 @@ import {
   BackgroundView,
   Card,
   Row,
-  ThemeOverrideChoicesList,
+  CustomThemesList,
 } from '.';
 
 const Screen = () => {
@@ -21,7 +21,7 @@ const Screen = () => {
           <Text style={styles.grayText}>Automatic</Text>
           <AutomaticDarkModeSwitch />
         </Row>
-        {customAppTheme ? <ThemeOverrideChoicesList /> : null}
+        {customAppTheme ? <CustomThemesList /> : null}
       </Card>
     </BackgroundView>
   );

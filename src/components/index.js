@@ -8,7 +8,7 @@ import Line from './Line';
 import Row from './Row';
 import RowWithCheckmark from './RowWithCheckmark';
 import Screen from './Screen';
-import ThemeOverrideChoicesList from './ThemeChoicesOverrideList';
+import CustomThemesList from './CustomThemesList';
 import ThemedNavigationContainer from './ThemedNavigationContainer';
 
 export {
@@ -23,5 +23,5 @@ export {
   RowWithCheckmark,
   Screen,
   ThemedNavigationContainer,
-  ThemeOverrideChoicesList,
+  CustomThemesList,
 };

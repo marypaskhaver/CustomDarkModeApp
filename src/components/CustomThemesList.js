@@ -7,9 +7,9 @@ import {useDispatch} from 'react-redux';
 import {DARK_MODE_OVERRIDE_OPTIONS} from '../constants';
 import {setCustomAppTheme} from '../redux/reducers/themesReducer';
 import {getThemeIDFromTheme} from '../utils';
-import {Line, RowWithCheckmark} from './';
+import {Line, RowWithCheckmark} from '.';
 
-const ThemeOverrideChoicesList = () => {
+const CustomThemesList = () => {
   const dispatch = useDispatch();
 
   const currentAppTheme = useTheme();
@@ -42,4 +42,4 @@ const ThemeOverrideChoicesList = () => {
   );
 };
 
-export default ThemeOverrideChoicesList;
+export default CustomThemesList;
