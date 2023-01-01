@@ -2,10 +2,9 @@ import {useTheme} from '@react-navigation/native';
 import React, {useEffect} from 'react';
 import {useState} from 'react';
 import {FlatList, TouchableOpacity} from 'react-native';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 
 import {DARK_MODE_OVERRIDE_OPTIONS} from '../constants';
-import {selectCustomAppTheme} from '../redux/reducers';
 import {setCustomAppTheme} from '../redux/reducers/themesReducer';
 import {getThemeIDFromTheme} from '../utils';
 import {Line, RowWithCheckmark} from './';
@@ -13,15 +12,10 @@ import {Line, RowWithCheckmark} from './';
 const ThemeOverrideChoicesList = () => {
   const dispatch = useDispatch();
 
-  const customAppTheme = useSelector(selectCustomAppTheme);
-  const customAppThemeID = getThemeIDFromTheme(customAppTheme);
-
   const currentAppTheme = useTheme();
   const currentAppThemeID = getThemeIDFromTheme(currentAppTheme);
 
-  const [selectedThemeID, setSelectedThemeID] = useState(
-    customAppThemeID ? customAppThemeID : currentAppThemeID,
-  );
+  const [selectedThemeID, setSelectedThemeID] = useState(currentAppThemeID);
 
   useEffect(() => {
     const customThemeDescription = DARK_MODE_OVERRIDE_OPTIONS[selectedThemeID];
