@@ -14,13 +14,13 @@ const ThemeOverrideChoicesList = () => {
   const dispatch = useDispatch();
 
   const customAppTheme = useSelector(selectCustomAppTheme);
-  const customThemeID = getThemeIDFromTheme(customAppTheme);
+  const customAppThemeID = getThemeIDFromTheme(customAppTheme);
 
   const currentAppTheme = useTheme();
   const currentAppThemeID = getThemeIDFromTheme(currentAppTheme);
 
   const [selectedThemeID, setSelectedThemeID] = useState(
-    customThemeID ? customThemeID : currentAppThemeID,
+    customAppThemeID ? customAppThemeID : currentAppThemeID,
   );
 
   const selectAndSaveThemeChoice = themeID => {
