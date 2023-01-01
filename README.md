@@ -2,8 +2,8 @@
 
 A small React Native app that demonstrates how to:
 
-- Add Dark Mode compatibility to your app
-- Allow your users to override their phone's Dark Mode solely within your app
+- Add dark mode compatibility to your app
+- Allow your users to override their phone's dark mode solely within your app
 
 Using
 

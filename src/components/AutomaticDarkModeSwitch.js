@@ -17,10 +17,10 @@ const AutomaticDarkModeSwitch = () => {
 
   useEffect(() => {
     if (isEnabled) {
-      // Switch was switched on; enable automatic Dark Mode
+      // Switch was switched on; enable automatic dark mode
       dispatch(setCustomAppTheme(null));
     } else {
-      // Switch was turned off; disable automatic Dark Mode
+      // Switch was turned off; disable automatic dark mode
       dispatch(setCustomAppTheme(currentPhoneTheme));
     }
   }, [currentPhoneTheme, dispatch, isEnabled]);
