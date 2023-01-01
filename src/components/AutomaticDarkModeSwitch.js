@@ -7,7 +7,7 @@ import {
   selectChosenOverrideThemeID,
   setChosenOverrideThemeID,
 } from '../redux/reducers';
-import getThemeIDFromTheme from '../utils/getThemeIDFromTheme';
+import {getThemeIDFromTheme} from '../utils';
 
 const AutomaticDarkModeSwitch = () => {
   const initialEnabledness = useSelector(selectChosenOverrideThemeID) === null;

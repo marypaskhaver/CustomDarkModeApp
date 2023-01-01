@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text} from 'react-native';
 import {useSelector} from 'react-redux';
 
-import {selectChosenOverrideThemeID} from '../redux/reducers/themesReducer';
+import {selectChosenOverrideThemeID} from '../redux/reducers';
 import {
   AutomaticDarkModeSwitch,
   BackgroundView,
