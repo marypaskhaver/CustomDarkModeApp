@@ -10,9 +10,11 @@ import {
 import {getThemeIDFromTheme} from '../utils';
 
 const AutomaticDarkModeSwitch = () => {
-  const initialEnabledness = useSelector(selectChosenOverrideThemeID) === null;
-  const dispatch = useDispatch();
   const [isEnabled, setIsEnabled] = useState(initialEnabledness);
+
+  const dispatch = useDispatch();
+  const initialEnabledness = useSelector(selectChosenOverrideThemeID) === null;
+
   const currentTheme = useTheme();
   const themeFromStoreID = getThemeIDFromTheme(currentTheme);
 
