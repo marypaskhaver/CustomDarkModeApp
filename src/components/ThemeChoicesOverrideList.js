@@ -24,8 +24,8 @@ const ThemeOverrideChoicesList = () => {
   );
 
   useEffect(() => {
-    const newThemeDescription = DARK_MODE_OVERRIDE_OPTIONS[selectedThemeID];
-    dispatch(setCustomAppTheme(newThemeDescription.theme));
+    const customThemeDescription = DARK_MODE_OVERRIDE_OPTIONS[selectedThemeID];
+    dispatch(setCustomAppTheme(customThemeDescription.theme));
   }, [dispatch, selectedThemeID]);
 
   return (
