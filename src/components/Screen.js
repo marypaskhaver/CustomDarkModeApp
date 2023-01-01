@@ -9,9 +9,9 @@ import {
   Card,
   Row,
   ThemeOverrideChoicesList,
-} from './';
+} from '.';
 
-const AppScreens = () => {
+const Screen = () => {
   const customAppTheme = useSelector(selectCustomAppTheme);
 
   return (
@@ -34,4 +34,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AppScreens;
+export default Screen;

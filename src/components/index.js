@@ -1,5 +1,4 @@
 import AdaptiveStatusBar from './AdaptiveStatusBar';
-import AppScreens from './AppScreens';
 import AutomaticDarkModeSwitch from './AutomaticDarkModeSwitch';
 import BackgroundView from './BackgroundView';
 import BulletPoint from './BulletPoint';
@@ -8,12 +7,12 @@ import Checkmark from './Checkmark';
 import Line from './Line';
 import Row from './Row';
 import RowWithCheckmark from './RowWithCheckmark';
+import Screen from './Screen';
 import ThemeOverrideChoicesList from './ThemeChoicesOverrideList';
 import ThemedNavigationContainer from './ThemedNavigationContainer';
 
 export {
   AdaptiveStatusBar,
-  AppScreens,
   AutomaticDarkModeSwitch,
   BackgroundView,
   BulletPoint,
@@ -22,6 +21,7 @@ export {
   Line,
   Row,
   RowWithCheckmark,
+  Screen,
   ThemedNavigationContainer,
   ThemeOverrideChoicesList,
 };
