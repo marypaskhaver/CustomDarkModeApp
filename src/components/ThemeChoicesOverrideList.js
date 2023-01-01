@@ -6,7 +6,7 @@ import {useDispatch, useSelector} from 'react-redux';
 
 import {DARK_MODE_OVERRIDE_OPTIONS} from '../constants';
 import {selectCurrentAppTheme} from '../redux/reducers';
-import {setCurrentAppTheme} from '../redux/reducers/themesReducer';
+import {setCustomAppTheme} from '../redux/reducers/themesReducer';
 import {getThemeIDFromTheme} from '../utils';
 import {Line, RowWithCheckmark} from './';
 
@@ -27,7 +27,7 @@ const ThemeOverrideChoicesList = () => {
   const selectAndSaveThemeChoice = themeID => {
     const newThemeDescription = DARK_MODE_OVERRIDE_OPTIONS[themeID];
     setSelectedThemeID(themeID);
-    dispatch(setCurrentAppTheme(newThemeDescription.theme));
+    dispatch(setCustomAppTheme(newThemeDescription.theme));
   };
 
   return (
