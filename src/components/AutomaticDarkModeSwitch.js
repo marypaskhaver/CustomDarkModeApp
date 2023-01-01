@@ -9,7 +9,7 @@ const AutomaticDarkModeSwitch = () => {
   const [isEnabled, setIsEnabled] = useState(true);
 
   const dispatch = useDispatch();
-  const currentAppTheme = useTheme();
+  const currentPhoneTheme = useTheme();
 
   const toggleSwitch = () => {
     setIsEnabled(previousState => !previousState);
@@ -21,9 +21,9 @@ const AutomaticDarkModeSwitch = () => {
       dispatch(setCustomAppTheme(null));
     } else {
       // Switch was turned off; disable automatic dark mode
-      dispatch(setCustomAppTheme(currentAppTheme));
+      dispatch(setCustomAppTheme(currentPhoneTheme));
     }
-  }, [currentAppTheme, dispatch, isEnabled]);
+  }, [currentPhoneTheme, dispatch, isEnabled]);
 
   return (
     <Switch

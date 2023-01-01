@@ -15,8 +15,9 @@ const getThemeFromScheme = scheme => {
 
 const ThemedNavigationContainer = ({children}) => {
   const scheme = useColorScheme();
-  const customAppTheme = useSelector(selectCustomAppTheme);
   const currentPhoneTheme = getThemeFromScheme(scheme);
+
+  const customAppTheme = useSelector(selectCustomAppTheme);
 
   return (
     <NavigationContainer
