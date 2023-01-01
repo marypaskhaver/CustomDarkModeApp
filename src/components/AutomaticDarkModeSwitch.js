@@ -1,5 +1,5 @@
 import {useTheme} from '@react-navigation/native';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {StyleSheet, Switch} from 'react-native';
 import {useDispatch} from 'react-redux';
 
@@ -13,15 +13,17 @@ const AutomaticDarkModeSwitch = () => {
 
   const toggleSwitch = () => {
     setIsEnabled(previousState => !previousState);
+  };
 
-    if (!isEnabled) {
+  useEffect(() => {
+    if (isEnabled) {
       // Switch was switched on; enable automatic dark mode
       dispatch(setCustomAppTheme(null));
     } else {
       // Switch was turned off; disable automatic dark mode
       dispatch(setCustomAppTheme(currentAppTheme));
     }
-  };
+  }, [currentAppTheme, dispatch, isEnabled]);
 
   return (
     <Switch
