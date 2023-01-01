@@ -1,12 +1,6 @@
 import themesReducer, {
-  selectChosenOverrideThemeID,
   selectCurrentAppTheme,
-  setChosenOverrideThemeID,
+  setCurrentAppTheme,
 } from './themesReducer';
 
-export {
-  selectChosenOverrideThemeID,
-  selectCurrentAppTheme,
-  setChosenOverrideThemeID,
-  themesReducer,
-};
+export {selectCurrentAppTheme, setCurrentAppTheme, themesReducer};

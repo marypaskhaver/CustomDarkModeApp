@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text} from 'react-native';
 import {useSelector} from 'react-redux';
 
-import {selectChosenOverrideThemeID} from '../redux/reducers';
+import {selectCurrentAppTheme} from '../redux/reducers';
 import {
   AutomaticDarkModeSwitch,
   BackgroundView,
@@ -12,7 +12,7 @@ import {
 } from './';
 
 const AppScreens = () => {
-  const chosenOverrideThemeID = useSelector(selectChosenOverrideThemeID);
+  const currentAppTheme = useSelector(selectCurrentAppTheme);
 
   return (
     <BackgroundView>
@@ -21,7 +21,7 @@ const AppScreens = () => {
           <Text style={styles.grayText}>Automatic</Text>
           <AutomaticDarkModeSwitch />
         </Row>
-        {chosenOverrideThemeID ? <ThemeOverrideChoicesList /> : null}
+        {currentAppTheme ? <ThemeOverrideChoicesList /> : null}
       </Card>
     </BackgroundView>
   );

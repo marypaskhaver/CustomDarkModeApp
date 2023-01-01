@@ -3,30 +3,25 @@ import React, {useState} from 'react';
 import {StyleSheet, Switch} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 
-import {
-  selectChosenOverrideThemeID,
-  setChosenOverrideThemeID,
-} from '../redux/reducers';
-import {getThemeIDFromTheme} from '../utils';
+import {selectCurrentAppTheme, setCurrentAppTheme} from '../redux/reducers';
 
 const AutomaticDarkModeSwitch = () => {
   const [isEnabled, setIsEnabled] = useState(initialEnabledness);
 
   const dispatch = useDispatch();
-  const initialEnabledness = useSelector(selectChosenOverrideThemeID) === null;
+  const initialEnabledness = useSelector(selectCurrentAppTheme) === null;
 
   const currentTheme = useTheme();
-  const themeFromStoreID = getThemeIDFromTheme(currentTheme);
 
   const toggleSwitch = () => {
     setIsEnabled(previousState => !previousState);
 
     if (!isEnabled) {
       // Switch was switched on; enable automatic dark mode
-      dispatch(setChosenOverrideThemeID(null));
+      dispatch(setCurrentAppTheme(null));
     } else {
       // Switch was turned off; disable automatic dark mode
-      dispatch(setChosenOverrideThemeID(themeFromStoreID));
+      dispatch(setCurrentAppTheme(currentTheme));
     }
   };
 
