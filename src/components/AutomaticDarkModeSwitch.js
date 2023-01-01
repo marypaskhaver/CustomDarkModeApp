@@ -6,10 +6,10 @@ import {useDispatch} from 'react-redux';
 import {setCustomAppTheme} from '../redux/reducers';
 
 const AutomaticDarkModeSwitch = () => {
-  const [isEnabled, setIsEnabled] = useState(true);
-
   const dispatch = useDispatch();
   const currentPhoneTheme = useTheme();
+
+  const [isEnabled, setIsEnabled] = useState(true);
 
   const toggleSwitch = () => {
     setIsEnabled(previousState => !previousState);

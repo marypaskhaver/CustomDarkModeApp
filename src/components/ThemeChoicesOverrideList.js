@@ -1,5 +1,5 @@
 import {useTheme} from '@react-navigation/native';
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useState} from 'react';
 import {FlatList, TouchableOpacity} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
@@ -23,11 +23,10 @@ const ThemeOverrideChoicesList = () => {
     customAppThemeID ? customAppThemeID : currentAppThemeID,
   );
 
-  const selectAndSaveThemeChoice = themeID => {
-    const newThemeDescription = DARK_MODE_OVERRIDE_OPTIONS[themeID];
-    setSelectedThemeID(themeID);
+  useEffect(() => {
+    const newThemeDescription = DARK_MODE_OVERRIDE_OPTIONS[selectedThemeID];
     dispatch(setCustomAppTheme(newThemeDescription.theme));
-  };
+  }, [dispatch, selectedThemeID]);
 
   return (
     <FlatList
@@ -36,7 +35,7 @@ const ThemeOverrideChoicesList = () => {
       keyExtractor={item => item.id}
       renderItem={({item}) => {
         return (
-          <TouchableOpacity onPress={() => selectAndSaveThemeChoice(item.id)}>
+          <TouchableOpacity onPress={() => setSelectedThemeID(item.id)}>
             <RowWithCheckmark
               textToDisplay={item.themeName}
               isChecked={item.id === selectedThemeID}
