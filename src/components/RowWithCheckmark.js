@@ -12,7 +12,7 @@ const RowWithCheckmark = ({textToDisplay, isChecked}) => {
     <Row>
       <BulletPoint />
       <Text style={styles.standardText}>{textToDisplay}</Text>
-      {isChecked && <Checkmark />}
+      {isChecked ? <Checkmark /> : null}
     </Row>
   );
 };
