@@ -22,11 +22,6 @@ const ThemedNavigationContainer = ({children}) => {
   const chosenOverrideThemeID = useSelector(selectChosenOverrideThemeID);
   const currentPhoneTheme = getThemeFromScheme(scheme);
 
-  // - If chosenOverrideThemeID exists, that means auto dark mode is DISABLED,
-  //    so set the theme to the user's currentAppTheme.
-  // - If chosenOverrideThemeID DOES NOT exist, auto dark mode is ENABLED,
-  //    so set the theme to the user's currentPhoneTheme.
-
   return (
     <NavigationContainer
       theme={chosenOverrideThemeID ? currentAppTheme : currentPhoneTheme}>
