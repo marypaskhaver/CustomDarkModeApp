@@ -1,6 +1,6 @@
 import themesReducer, {
-  selectCurrentAppTheme,
+  selectCustomAppTheme,
   setCustomAppTheme,
 } from './themesReducer';
 
-export {selectCurrentAppTheme, setCustomAppTheme, themesReducer};
+export {selectCustomAppTheme, setCustomAppTheme, themesReducer};

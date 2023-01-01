@@ -4,7 +4,7 @@ import {useColorScheme} from 'react-native';
 import {useSelector} from 'react-redux';
 
 import {APP_THEMES} from '../constants';
-import {selectCurrentAppTheme} from '../redux/reducers';
+import {selectCustomAppTheme} from '../redux/reducers';
 
 const getThemeFromScheme = scheme => {
   const schemeIsDark = scheme === 'dark';
@@ -15,12 +15,12 @@ const getThemeFromScheme = scheme => {
 
 const ThemedNavigationContainer = ({children}) => {
   const scheme = useColorScheme();
-  const currentAppTheme = useSelector(selectCurrentAppTheme);
+  const customAppTheme = useSelector(selectCustomAppTheme);
   const currentPhoneTheme = getThemeFromScheme(scheme);
 
   return (
     <NavigationContainer
-      theme={currentAppTheme ? currentAppTheme : currentPhoneTheme}>
+      theme={customAppTheme ? customAppTheme : currentPhoneTheme}>
       {children}
     </NavigationContainer>
   );

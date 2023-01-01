@@ -3,16 +3,16 @@ import {createSlice} from '@reduxjs/toolkit';
 const themesSlice = createSlice({
   name: 'themes',
   initialState: {
-    currentAppTheme: null,
+    customAppTheme: null,
   },
   reducers: {
     setCustomAppTheme(state, action) {
-      state.currentAppTheme = action.payload;
+      state.customAppTheme = action.payload;
     },
   },
 });
 
-export const selectCurrentAppTheme = state => state.themes.currentAppTheme;
+export const selectCustomAppTheme = state => state.themes.customAppTheme;
 export const {setCustomAppTheme} = themesSlice.actions;
 
 export default themesSlice.reducer;

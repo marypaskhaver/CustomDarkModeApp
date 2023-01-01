@@ -5,23 +5,22 @@ import {FlatList, TouchableOpacity} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 
 import {DARK_MODE_OVERRIDE_OPTIONS} from '../constants';
-import {selectCurrentAppTheme} from '../redux/reducers';
+import {selectCustomAppTheme} from '../redux/reducers';
 import {setCustomAppTheme} from '../redux/reducers/themesReducer';
 import {getThemeIDFromTheme} from '../utils';
 import {Line, RowWithCheckmark} from './';
 
 const ThemeOverrideChoicesList = () => {
-  const currentAppTheme = useSelector(selectCurrentAppTheme);
-  const initialChosenOverrideThemeID = getThemeIDFromTheme(currentAppTheme);
-  const currentTheme = useTheme();
   const dispatch = useDispatch();
+  const currentAppTheme = useTheme();
 
-  const currentPhoneThemeID = getThemeIDFromTheme(currentTheme);
+  const customAppTheme = useSelector(selectCustomAppTheme);
+  const customThemeID = getThemeIDFromTheme(customAppTheme);
+
+  const currentPhoneThemeID = getThemeIDFromTheme(currentAppTheme);
 
   const [selectedThemeID, setSelectedThemeID] = useState(
-    initialChosenOverrideThemeID
-      ? initialChosenOverrideThemeID
-      : currentPhoneThemeID,
+    customThemeID ? customThemeID : currentPhoneThemeID,
   );
 
   const selectAndSaveThemeChoice = themeID => {
