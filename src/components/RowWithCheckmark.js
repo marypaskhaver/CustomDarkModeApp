@@ -20,8 +20,8 @@ const RowWithCheckmark = ({textToDisplay, isChecked}) => {
 const getStyleSheet = colors =>
   StyleSheet.create({
     standardText: {
-      fontSize: 16,
       color: colors.text,
+      fontSize: 16,
     },
   });
 

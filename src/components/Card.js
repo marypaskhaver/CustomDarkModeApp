@@ -12,14 +12,14 @@ const Card = ({children}) => {
 const getStyleSheet = colors =>
   StyleSheet.create({
     card: {
-      padding: 16,
+      backgroundColor: colors.background,
       borderRadius: 6,
       borderWidth: 1,
       borderColor: 'gray',
-      shadowOpacity: 0.1,
+      padding: 16,
       shadowOffset: {height: 5},
+      shadowOpacity: 0.1,
       width: 300,
-      backgroundColor: colors.background,
     },
   });
 

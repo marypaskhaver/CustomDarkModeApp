@@ -7,8 +7,8 @@ const Row = ({children}) => {
 
 const styles = StyleSheet.create({
   row: {
-    flexDirection: 'row',
     alignItems: 'center',
+    flexDirection: 'row',
     height: 44,
   },
 });

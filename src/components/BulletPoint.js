@@ -12,12 +12,12 @@ const BulletPoint = () => {
 const getStyleSheet = colors => {
   return StyleSheet.create({
     bulletPoint: {
-      width: 8,
-      height: 8,
-      borderRadius: 4,
       backgroundColor: colors.text,
-      marginRight: 12,
+      borderRadius: 4,
+      height: 8,
       marginLeft: 16,
+      marginRight: 12,
+      width: 8,
     },
   });
 };

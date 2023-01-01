@@ -9,10 +9,10 @@ const Checkmark = () => {
 
 const styles = StyleSheet.create({
   image: {
-    marginLeft: 'auto',
-    width: 15,
     height: 15,
+    marginLeft: 'auto',
     tintColor: '#ED4545',
+    width: 15,
   },
 });
 

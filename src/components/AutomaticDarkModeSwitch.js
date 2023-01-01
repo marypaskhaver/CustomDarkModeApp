@@ -7,8 +7,8 @@ import {setCustomAppTheme} from '../redux/reducers';
 
 const AutomaticDarkModeSwitch = () => {
   const [isEnabled, setIsEnabled] = useState(true);
-  const dispatch = useDispatch();
 
+  const dispatch = useDispatch();
   const currentAppTheme = useTheme();
 
   const toggleSwitch = () => {

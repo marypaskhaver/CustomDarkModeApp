@@ -12,15 +12,15 @@ import {Line, RowWithCheckmark} from './';
 
 const ThemeOverrideChoicesList = () => {
   const dispatch = useDispatch();
-  const currentAppTheme = useTheme();
 
   const customAppTheme = useSelector(selectCustomAppTheme);
   const customThemeID = getThemeIDFromTheme(customAppTheme);
 
-  const currentPhoneThemeID = getThemeIDFromTheme(currentAppTheme);
+  const currentAppTheme = useTheme();
+  const currentAppThemeID = getThemeIDFromTheme(currentAppTheme);
 
   const [selectedThemeID, setSelectedThemeID] = useState(
-    customThemeID ? customThemeID : currentPhoneThemeID,
+    customThemeID ? customThemeID : currentAppThemeID,
   );
 
   const selectAndSaveThemeChoice = themeID => {
